@@ -1,0 +1,40 @@
+; Exported zone file from Azure DNS
+;      Zone name: woodnet.uk
+;      Resource Group Name: rg_woodnet-o365-shared
+;      Date and time (UTC): Sun, 02 Feb 2020 02:15:25 -0000
+
+$TTL 300
+$ORIGIN woodnet.uk.
+    
+@ 3600 IN SOA ns1-07.azure-dns.com. azuredns-hostmaster.microsoft.com. (
+              1 ; serial
+              3600 ; refresh
+              300 ; retry
+              2419200 ; expire
+              300 ; minimum
+              )
+
+  3600 IN A 51.140.146.130
+
+  172800 IN NS ns1-07.azure-dns.com.
+  172800 IN NS ns2-07.azure-dns.net.
+  172800 IN NS ns3-07.azure-dns.org.
+  172800 IN NS ns4-07.azure-dns.info.
+
+  3600 IN TXT "webapp-woodnet-dev-01.azurewebsites.net"
+
+dev 3600 IN CNAME webapp-woodnet-dev-01.azurewebsites.net.
+
+www 3600 IN CNAME webapp-woodnet-dev-01.azurewebsites.net.
+
+@ 3600 IN MX 0 woodnet-uk.mail.protection.outlook.com.
+autodiscover 3600 IN CNAME autodiscover.outlook.com.
+@ 3600 IN TXT "v=spf1 include:spf.protection.outlook.com -all"
+
+sip 3600 IN CNAME sipdir.online.lync.com.
+lyncdiscover 3600 IN CNAME webdir.online.lync.com.
+_sip._tls.woodnet.uk. 3600 IN SRV 100 1 443 sipdir.online.lync.com.
+_sipfederationtls._tcp.woodnet.uk. 3600 IN SRV 100 1 5061 sipfed.online.lync.com.
+
+enterpriseregistration 3600 IN CNAME enterpriseregistration.windows.net.
+enterpriseenrollment 3600 IN CNAME enterpriseenrollment.manage.microsoft.com.

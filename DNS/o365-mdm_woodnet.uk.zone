@@ -1,0 +1,3 @@
+﻿; Zone file for Office 365 services - Intune and Mobile Device Management
+enterpriseregistration 3600 IN CNAME enterpriseregistration.windows.net.
+enterpriseenrollment 3600 IN CNAME enterpriseenrollment.manage.microsoft.com.

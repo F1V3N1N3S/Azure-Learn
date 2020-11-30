@@ -1,0 +1,16 @@
+TYPE	HOST NAME	VALUE	SERVICE	ACTIONS
+CNAME	_domainconnect	_domainconnect.1and1.com	Domain Connect	
+MX	@	woodnet-uk.mail.protection.outlook.com	Microsoft Office 365	
+SPF (TXT)	@	"v=spf1 include:spf.protection.outlook.com -all"	Microsoft Office 365	
+SRV	_sipfederationtls._tcp	1 5061 sipfed.online.lync.com	Microsoft Office 365	
+SRV	_sip._tls	1 443 sipdir.online.lync.com	Microsoft Office 365	
+CNAME	autodiscover	autodiscover.outlook.com	Microsoft Office 365	
+CNAME	enterpriseenrollment	enterpriseenrollment.manage.microsoft.com	Microsoft Office 365	
+CNAME	enterpriseregistration	enterpriseregistration.windows.net	Microsoft Office 365	
+CNAME	lyncdiscover	webdir.online.lync.com	Microsoft Office 365	
+CNAME	sip	sipdir.online.lync.com	Microsoft Office 365	
+A	@	51.140.146.130	-	
+TXT	@	"webapp-woodnet-dev-01.azurewebsites.net"	-	
+TXT	_acme-challenge	"8X7D68hEz7Ryl32v5LFXTxsV_upGDyNF7CBwP0PBsZE"	-	
+CNAME	dev	webapp-woodnet-dev-01.azurewebsites.net	-	
+CNAME	www	webapp-woodnet-dev-01.azurewebsites.net	-	
